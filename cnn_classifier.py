@@ -70,6 +70,7 @@ X_dev = X_dev.values.reshape(-1,28,28,1)
 
 # Encode labels to one hot vectors (ex : 2 -> [0,0,1,0,0,0,0,0,0,0])
 y_train = to_categorical(y_train, num_classes = 10)
+y_dev = to_categorical(y_dev, num_classes = 10)
 ################################################
 # Preprocessed data:
 # X_train (37800, 784)
