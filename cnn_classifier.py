@@ -67,6 +67,9 @@ del(dev_set,training_set)
 # Reshape image in 3 dimensions (height = 28px, width = 28px , canal = 1)
 X_train = X_train.values.reshape(-1,28,28,1)
 X_dev = X_dev.values.reshape(-1,28,28,1)
+
+# Encode labels to one hot vectors (ex : 2 -> [0,0,1,0,0,0,0,0,0,0])
+y_train = to_categorical(y_train, num_classes = 10)
 ################################################
 # Preprocessed data:
 # X_train (37800, 784)
